@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="logica.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form id="form">
+      <div id="component1" class="active">
+        <div>
+          <h4>
+            Qual a distância percorrida da sua casa até o trabalho (em km)?
+          </h4>
+          <input type="number" value="" id="distanciaKm" />
+        </div>
+      </div>
+
+      <div id="component2" class="disable">
+        <div>
+          <h4>Qual o consumo médio de seu veículo (em km/L)?</h4>
+          <input type="number" value="" id="consumoMedio"/>
+        </div>
+      </div>
+
+      <div id="component3" class="disable">
+        <div>
+          <h4>Em quantos postos você pesquisou o valor do combustível?</h4>
+          <input type="number" value="" id="quantPostos"/>
+        </div>
+      </div>
+
+      <div class="div-btn">
+        <button type="button" onclick="cal()">Voltar</button>
+        <button type="button" onclick="nextComponent()">Próximo</button>
+      </div>
+    </form>
+
+    <div class="component">
+      <h5>O valor é </h5>
+    </div>
+  </body>
+</html>
