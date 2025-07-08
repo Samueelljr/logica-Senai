@@ -1,5 +1,5 @@
 let passoAtual = 1;
-const totalPassos = 3;
+const totalPassos = 7;
 
 function nextComponent(passo) {
   for (let i = 1; i <= totalPassos; i++) {
