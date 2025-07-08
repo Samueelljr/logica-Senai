@@ -21,5 +21,9 @@ function next() {
   if (passoAtual < totalPassos) {
     passoAtual++;
     nextComponent(passoAtual)
-  } return
+  } 
+   const nameBtn = document.getElementById("btnNext");
+  if (passoAtual >= 7) {
+    nameBtn.innerText = "Finalizar"
+  }
 }
