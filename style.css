@@ -4,25 +4,49 @@ body {
   justify-content: center;
   height: 100vh;
   flex-direction: column;
+  color: #fff;
+  font-family: Times, 'Times New Roman', serif;
 }
 
-form div {
+.div-form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
+  border: solid 1px black;
+  border-radius: 15px;
+  min-height: 10rem;
+  min-width: 30rem;
+  background-color: darkseagreen;
 }
 
 .div-btn {
   display: flex;
   width: 100%;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 15rem;
 }
 
-.disable {
+.component {
   display: none;
 }
 .active {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn {
+  width: 6rem;
+  height: 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: darkcyan;
+}
+
+.btn:hover {
+  background-color: aquamarine;
 }
