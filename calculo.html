@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="logica.js"></script>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
 
-    <div class="container">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="logica.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+  <div class="container">
     <div class="bubbles">
       <span style="--i:11"></span>
       <span style="--i:1"></span>
@@ -23,10 +25,10 @@
       <span style="--i:25"></span>
       <span style="--i:41"></span>
       <span style="--i:31"></span>
-      <span style="--i:91"></span>
-      <span style="--i:71"></span>
       <span style="--i:21"></span>
-      <span style="--i:61"></span>
+      <span style="--i:11"></span>
+      <span style="--i:21"></span>
+      <span style="--i:41"></span>
       <span style="--i:14"></span>
       <span style="--i:21"></span>
       <span style="--i:31"></span>
@@ -35,7 +37,7 @@
       <span style="--i:11"></span>
       <span style="--i:17"></span>
       <span style="--i:31"></span>
-      <span style="--i:91"></span>
+      <span style="--i:21"></span>
       <span style="--i:71"></span>
       <span style="--i:21"></span>
       <span style="--i:61"></span>
@@ -45,22 +47,23 @@
       <span style="--i:25"></span>
       <span style="--i:41"></span>
       <span style="--i:31"></span>
-      <span style="--i:91"></span>
-      <span style="--i:71"></span>
+      <span style="--i:44"></span>
+      <span style="--i:31"></span>
       <span style="--i:21"></span>
-      <span style="--i:61"></span>
+      <span style="--i:33"></span>
       <span style="--i:14"></span>
-      <span style="--i:1"></span>
+      <span style="--i:4"></span>
       <span style="--i:11"></span>
       <span style="--i:17"></span>
       <span style="--i:31"></span>
-      <span style="--i:91"></span>
+      <span style="--i:31"></span>
       <span style="--i:71"></span>
       <span style="--i:21"></span>
       <span style="--i:61"></span>
       <span style="--i:14"></span>
       <span style="--i:17"></span>
     </div>
+
     <form id="form" class="div-form">
       <div id="component1" class="active">
         <h4>Qual a distância percorrida da sua casa até o trabalho (em km)?</h4>
@@ -74,30 +77,26 @@
 
       <div id="component3" class="component">
         <h4>Em quantos postos você pesquisou o valor do combustível?</h4>
-        <input type="number" value="" id="quantPostos" />
+        <input type="number" value="" id="quantPostos" onchange="numberPostos()" />
       </div>
 
-        <div id="component4" class="component">
-          <h4>Digite o valor encontrado ( em R$ ) no posto 1.</h4>
+      <div id="component4" class="component">
+        <div id="templatePosto" style="display: none;">
+          <h4>Digite o valor encontrado (em R$) no posto 1.</h4>
           <input type="number" value="" id="valorPosto1" />
         </div>
-        <div id="component5" class="component">
-          <h4>Digite o valor encontrado ( em R$ ) no posto 2.</h4>
-          <input type="number" value="" id="valorPosto2" />
-        </div>
-        <div id="component6" class="component">
-          <h4>Digite o valor encontrado ( em R$ ) no posto 3.</h4>
-          <input type="number" value="" id="valorPosto3" />
-        </div>
-        <div id="component7" class="component">
-          <h4>Digite o valor encontrado ( em R$ ) no posto 4.</h4>
-          <input type="number" value="" id="valorPosto4" />
-        </div>
+      </div>
+
+      <div id="templateResult" style="margin-top: 20px; display: none;"></div>
 
       <div class="div-btn">
         <button type="button" class="btn" onclick="cal()">Voltar</button>
-        <button type="button" class="btn" onclick="next()">Próximo</button>
+        <button type="button" class="btn" id="btnNext" onclick=" next()">Próximo</button>
       </div>
     </form>
-  </body>
+
+    
+  </div>
+</body>
+
 </html>
