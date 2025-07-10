@@ -1,5 +1,5 @@
 let passoAtual = 1;
-const totalPassos = 8;
+let totalPassos = 4;
 
 function nextComponent(passo) {
   for (let i = 1; i <= totalPassos; i++) {
@@ -15,6 +15,19 @@ function nextComponent(passo) {
     componenteAtivo.classList.add('active');
   }
 }
+
+function banckComponent() {
+  if (passoAtual > 1) {
+    passoAtual--;
+    nextComponent(passoAtual)
+  }
+
+  const nameBtn = document.getElementById("btnNext");
+  if (nameBtn.innerText === "Finalizar") {
+    nameBtn.innerText = "Próximo";
+  }
+}
+
 function next() {
 
   const currentComponent = document.querySelector('.active');
@@ -56,13 +69,19 @@ function next() {
   if (inputQntPts.value) {
     nameBtn.innerText = "Finalizar"
   }
+
+  if (nameBtn.innerText === "Finalizar" && passoAtual === totalPassos) {
+    cal();
+  }
 }
+
 
 // Função que vai gerar o número de postos
 function numberPostos() {
   const numberPostos = parseInt(document.getElementById('quantPostos').value);
   const container = document.getElementById('component4');
   const template = document.getElementById('templatePosto');
+  
 
   if (isNaN(numberPostos) || numberPostos <= 0) {
     alert("Por favor, digite um número válido maior que 0.");
@@ -75,7 +94,6 @@ function numberPostos() {
   for (let i = 1; i <= numberPostos; i++) {
     const clone = template.cloneNode(true);
     clone.style.display = 'block';
-    clone.id = `posto${i}`;
 
     // Atualiza o conteúdo do h4 e input
     const h4 = clone.querySelector('h4');
@@ -87,6 +105,7 @@ function numberPostos() {
 
     container.appendChild(clone);
   }
+ totalPassos = totalPassos + (numberPostos - 1);
 }
 
 // Função que irá fazer os calculos
