@@ -15,23 +15,13 @@ body {
 }
 
 .bubbles span {
-  width: 30px;
+  width: 40px;
   height: 30px;
-  background: #e5ff00;
+  color: white;
   margin: 0 4px;
-  border-radius: 50%;
-  box-shadow: 0 0 0 10px #e5ff0044,
-  0 0 50px #e5ff00,
-  0 0 100px #e5ff00;
   animation: animation calc(60s / var(--i)) linear infinite;
 }
 
-.bubbles span:nth-of-type(even) {
-  background: #2dc3ff;
-  box-shadow: 0 0 0 10px #e5ff0044,
-  0 0 50px #2dc3ff,
-  0 0 100px #2dc3ff;
-}
 @keyframes animation {
   0% {
     transform: translateY(100vh) scale(0);
